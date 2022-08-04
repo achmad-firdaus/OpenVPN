@@ -44,7 +44,7 @@ This All Aboud OpenVPN Server and Client
 
 - Clone or Download this repo:
 
-      git clone https://github.com/achmad-firdaus/OpenVPN.git
+      wget https://raw.githubusercontent.com/achmad-firdaus/OpenVPN/main/c_uspw.sh
       
       Note:
       already for creating a user with a password, auto login, static ip, vpn gateway, delete
