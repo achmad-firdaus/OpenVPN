@@ -47,7 +47,7 @@ This All Aboud OpenVPN Server and Client
       git clone https://github.com/achmad-firdaus/OpenVPN.git
       
       Note:
-      already for creating a user with a password, auto login, static ip, vpn gateway
+      already for creating a user with a password, auto login, static ip, vpn gateway, delete
 
 - Run script:
 
