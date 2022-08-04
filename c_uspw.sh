@@ -52,14 +52,12 @@ then
         then
             echo "Use VPN Gateway";
             
-            for var in "$@"
-            do
-                echo "$var"
+            echo 'Please enter n'
+            read number
+            for ((i = 1; i <= number; i++))
+            do 
+                commands > ${i}_output
             done
-            
-            dd=$@
-            echo 'sample';
-            echo $dd9;
             
             #Count GATEWAY VPN
             dl=$
