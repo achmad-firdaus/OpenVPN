@@ -1,5 +1,8 @@
 #!/bin/sh
-# Usage: sh cuspw.sh "username" "password"
+# Usage: sh c_uspw.sh "username" "password"
 
-echo "$1"
-echo "$2"
+username = $i
+password = $2
+
+echo "$username"
+echo "$password"
