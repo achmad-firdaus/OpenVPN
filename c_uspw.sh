@@ -54,16 +54,14 @@ then
 
             #Count GATEWAY VPN
             dl=$
-            len=8
+            len=0
             for (( c=1; c<=$gatwayvpncount; c++ ))
             do
-                len=$(($len+1))
-                # echo $len;
+#                 len=$(($len+1))
                 echo -n "VPN Gateway with subnet: ";
                 read;
-                sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut
-#                 echo "sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut";
-                # echo "Welcome $i times";
+                sacli --user $username --key "c2s_route.$len" --value ${REPLY} UserPropPut
+                len=$(($len+1))
             done
     else
         echo "NO Use VPN Gateway";
