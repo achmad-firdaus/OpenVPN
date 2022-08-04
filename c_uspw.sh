@@ -58,7 +58,9 @@ then
             for (( c=1; c<=$gatwayvpncount; c++ ))
             do
                 len=$(($len+1))
-                echo $9
+                var=$dl$len
+                echo $var;
+                echo $9;
                 # echo $len;
 #                 sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut
                 echo "sacli --user $username --key "c2s_route.$c" --value $dl$len UserPropPut";
