@@ -57,6 +57,10 @@ then
                 echo "$var"
             done
             
+            dd=$@
+            echo 'sample';
+            echo $dd9;
+            
             #Count GATEWAY VPN
             dl=$
             len=8
