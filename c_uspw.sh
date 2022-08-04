@@ -23,6 +23,7 @@ then
     stat_statik=$5
     stat_statik_IP=$6
     gatwayvpn=$7
+    gatwayvpncount=$8
 
     # Add User:
     sacli --user $username --key "type" --value "user_connect" UserPropPut
@@ -53,8 +54,8 @@ then
 
             #Count GATEWAY VPN
             dl=$
-            len=7
-            for i in {1..5}
+            len=8
+            for i in {1..$gatwayvpncount}
             do
                 len=$(($len+1))
                 # echo $len;
