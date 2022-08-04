@@ -22,6 +22,7 @@ then
     autologin=$4
     stat_statik=$5
     stat_statik_IP=$6
+    gatwayvpn=$7
 
     # Add User:
     sacli --user $username --key "type" --value "user_connect" UserPropPut
@@ -46,17 +47,18 @@ then
         echo "Use Dynamic IP";
     fi
 
-    if [ $stat_statik == $YES ]
+    if [ $gatwayvpn == $YES ]
         then
             echo "Use VPN Gateway";
 
             #Count GATEWAY VPN
+            dl=$
             len=7
             for i in {1..5}
             do
                 len=$(($len+1))
                 # echo $len;
-                sacli --user testing --key "c2s_route.$i" --value "$len" UserPropPut
+                sacli --user testing --key "c2s_route.$i" --value "{$dl$len}" UserPropPut
                 # echo "Welcome $i times";
             done
     else
