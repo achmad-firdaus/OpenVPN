@@ -54,26 +54,27 @@ This All Aboud OpenVPN Server and Client
 
       bash ./c_uspw.sh CREATE/DELETE=<YES/NO> <USERNAME> <PASSWORD> AUTO_LOGIN=<YES/NO> STATIS_IP=<YES/NO> IF_YES=<IP_ADDRESS>/IF_NO=<0.0.0.0> VPN_GATEWAY=<YES/NO> HOW_MUCH_GATEWAY=<NUMBER>
 
-  - for Create User (CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC, VPN GATEWAY, HOW MUCH GATEWAY)
+  - for Create User 
+    - CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC, VPN GATEWAY, HOW MUCH GATEWAY
 
           bash ./c_uspw.sh YES username password YES YES 172.16.1.5 YES 2
           
-
-  - for Create User (CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC)
+    - CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC
 
           bash ./c_uspw.sh YES username password YES YES 172.16.1.5 NO 0
           
 
-  - for Create User (CREATE, USERNAME, PASSWORD, AUTO LOGIN)
+    - CREATE, USERNAME, PASSWORD, AUTO LOGIN
 
           bash ./c_uspw.sh YES username password YES NO 0.0.0.0 NO 0
 
 
-  - for Create User (CREATE, USERNAME, PASSWORD)
+    - CREATE, USERNAME, PASSWORD
 
           bash ./c_uspw.sh YES username password NO NO 0.0.0.0 NO 0
 
-  - for Delete User (DELETE, USERNAME)
+  - for Delete User 
+    - DELETE, USERNAME
 
           bash ./c_uspw.sh NO username 
 
