@@ -68,10 +68,11 @@ then
                 var=$dl$len
                 echo $var;
                 echo $9;
+                valsub$c=commands > ${i}_output
                 # echo $len;
 #                 sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut
-                sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut
-#                 echo "sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut";
+#                 sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut
+                echo "sacli --user $username --key "c2s_route.$c" --value $valsub$c UserPropPut";
                 #echo "sacli --user $username --key "c2s_route.$c" --value $$len UserPropPut";
                 # echo "Welcome $i times";
             done
