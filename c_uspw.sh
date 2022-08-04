@@ -55,12 +55,12 @@ then
             #Count GATEWAY VPN
             dl=$
             len=8
-            for (( i=1; c<=$gatwayvpncount; c++ ))
+            for (( c=1; c<=$gatwayvpncount; c++ ))
             do
                 len=$(($len+1))
                 # echo $len;
                 # sacli --user testing --key "c2s_route.$i" --value "{$dl$len}" UserPropPut
-                echo "sacli --user testing --key "c2s_route.$i" --value "$dl$len" UserPropPut";
+                echo "sacli --user testing --key "c2s_route.$c" --value "$dl$len" UserPropPut";
                 # echo "Welcome $i times";
             done
     else
