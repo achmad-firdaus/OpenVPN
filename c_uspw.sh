@@ -51,7 +51,12 @@ then
     if [ $gatwayvpn == $YES ]
         then
             echo "Use VPN Gateway";
-
+            
+            for var in "$@"
+            do
+                echo "$var"
+            done
+            
             #Count GATEWAY VPN
             dl=$
             len=8
