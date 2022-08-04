@@ -60,8 +60,8 @@ then
                 len=$(($len+1))
                 # echo $len;
                 # sacli --user testing --key "c2s_route.$i" --value "{$dl$len}" UserPropPut
-                echo "sacli --user testing --key "c2s_route.$i" --value "{$dl$len}" UserPropPut";
-                # echo "Welcome $i times";
+#                 echo "sacli --user testing --key "c2s_route.$i" --value "$dl$len" UserPropPut";
+                echo "Welcome $i times";
             done
     else
         echo "NO Use VPN Gateway";
