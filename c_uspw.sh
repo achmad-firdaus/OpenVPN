@@ -4,15 +4,15 @@
 username=$1
 password=$2
 stat_statik=$3
-stat_statik_YES="YES"
+stat_statik_YES='YES'
 
-echo "$username"
-echo "$password"
-echo "$stat_statik"
+echo $username;
+echo $password;
+echo $stat_statik;
 
-if ( $stat_statik == $stat_statik_YES )
+if [ $stat_statik == $stat_statik_YES ]
 then
-  echo "Statik IP"
+  echo "Statik IP";
 else
-  echo "Dynamic IP"
+  echo "Dynamic IP";
 fi
