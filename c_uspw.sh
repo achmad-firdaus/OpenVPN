@@ -3,9 +3,9 @@
 # Create By Achmad
 # Date: 04 August 2022
 # Note:
-# Usage for create user: bash ./c_uspw.sh YES {username} {password} AutoLogin:{YES/NO} StatikIP:{YES/NO} {IF Statik YES: Add IPaddress} VPNGATEWAY:{YES/NO} Count_VPNGATEWAY{Number} {subnet}
-#                    EX: bash ./c_uspw.sh YES achmad password YES NO 0.0.0.0
-#                    EX: bash ./c_uspw.sh YES achmad password YES YES 172.16.1.200
+# Usage for create user: bash ./c_uspw.sh YES {username} {password} AutoLogin:{YES/NO} StatikIP:{YES/NO} {IF Statik YES: Add IPaddress} VPNGATEWAY:{YES/NO} Count_VPNGATEWAY{Number}
+#                    EX: bash ./c_uspw.sh YES achmad password YES NO 0.0.0.0 NO 0
+#                    EX: bash ./c_uspw.sh YES achmad password YES YES 172.16.1.200 YES 2
 # Usage for delete user: bash ./c_uspw.sh NO {username} 
 
 YES='YES'
