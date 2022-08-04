@@ -70,7 +70,8 @@ then
                 echo $9;
                 # echo $len;
 #                 sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut
-                echo "sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut";
+                sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut
+#                 echo "sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut";
                 #echo "sacli --user $username --key "c2s_route.$c" --value $$len UserPropPut";
                 # echo "Welcome $i times";
             done
