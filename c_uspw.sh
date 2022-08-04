@@ -52,12 +52,12 @@ then
         then
             echo "Use VPN Gateway";
             
-            echo 'Please enter n'
-            read number
-            for ((i = 1; i <= number; i++))
-            do 
-                commands > ${i}_output
-            done
+#             echo 'Please enter n'
+#             read number
+#             for ((i = 1; i <= number; i++))
+#             do 
+#                 commands > ${i}_output
+#             done
             
             #Count GATEWAY VPN
             dl=$
@@ -70,7 +70,7 @@ then
                 echo $9;
                 # echo $len;
 #                 sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut
-                echo "sacli --user $username --key "c2s_route.$c" --value $dl$len UserPropPut";
+                echo "sacli --user $username --key "c2s_route.$c" --value commands > ${i}_output UserPropPut";
                 #echo "sacli --user $username --key "c2s_route.$c" --value $$len UserPropPut";
                 # echo "Welcome $i times";
             done
