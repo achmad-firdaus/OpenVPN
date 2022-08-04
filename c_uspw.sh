@@ -51,10 +51,6 @@ then
     if [ $gatwayvpn == $YES ]
         then
             echo "Use VPN Gateway";
-            
-            echo -n "Type something and press enter: ";
-            read;
-            echo You typed ${REPLY}
 
             #Count GATEWAY VPN
             dl=$
@@ -65,7 +61,8 @@ then
                 # echo $len;
                 echo -n "VPN Gateway with subnet: ";
                 read;
-                echo "sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut";
+                sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut
+#                 echo "sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut";
                 # echo "Welcome $i times";
             done
     else
