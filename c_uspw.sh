@@ -3,8 +3,10 @@
 # Create By Achmad
 # Date: 04 August 2022
 # Note:
-# Usage for create user: bash ./c_uspw.sh YES {username} {password} StatikIP:{YES/NO} IPaddress:EX{172.16.1.200}
-# Usage for delete user:
+# Usage for create user: bash ./c_uspw.sh YES {username} {password} StatikIP:{YES/NO} {IF Statik YES IPaddress}
+#                    EX: bash ./c_uspw.sh YES achmad password NO 0.0.0.0
+#                    EX: bash ./c_uspw.sh YES achmad password YES 172.16.1.200
+# Usage for delete user: bash ./c_uspw.sh NO {username} 
 
 YES='YES'
 
@@ -38,7 +40,13 @@ then
   fi
 
 else
-  echo "Use Dynamic IP";
+  echo "Delete User";
+  
+  #variable create
+  username=$2
+  
+  sacli --user $username UserPropDelAll
+  
 fi
 
 sacli start
