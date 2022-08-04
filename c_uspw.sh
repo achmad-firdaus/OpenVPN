@@ -4,12 +4,13 @@
 username=$1
 password=$2
 stat_statik=$3
+stat_statik_YES="YES"
 
 echo "$username"
 echo "$password"
 echo "$stat_statik"
 
-if [ "$stat_statik" -eq "YES" ]
+if [ $stat_statik == $stat_statik_YES ]
 #if [$stat_statik=='YES']
 then
   echo "Statik IP"
