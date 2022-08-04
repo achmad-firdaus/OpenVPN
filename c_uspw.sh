@@ -60,7 +60,7 @@ then
                 len=$(($len+1))
                 # echo $len;
 #                 sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut
-                # echo "sacli --user $username --key "c2s_route.$c" --value "$dl$len" UserPropPut";
+                echo "sacli --user $username --key "c2s_route.$c" --value $dl$len UserPropPut";
                 # echo "Welcome $i times";
             done
     else
