@@ -8,7 +8,8 @@ stat_statik=$3
 echo "$username"
 echo "$password"
 
-if [$stat_statik=='YES']
+if [ $stat_statik == 'bob' ]
+#if [$stat_statik=='YES']
 then
   echo "Statik IP"
 else
