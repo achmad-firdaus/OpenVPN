@@ -1,5 +1,10 @@
 #!/bin/sh
-# Usage: bash ./c_uspw.sh "username" "password" "stat value YES/NO use statik IP"
+# 
+# Create By Achmad
+# Date: 04 August 2022
+# Note:
+# Usage for create user: bash ./c_uspw.sh YES {username} {password} StatikIP:{YES/NO} IPaddress:EX{172.16.1.200}
+# Usage for delete user:
 
 YES='YES'
 
