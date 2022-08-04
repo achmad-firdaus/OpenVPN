@@ -6,6 +6,7 @@ This All Aboud OpenVPN Server and Client
 - [Installation OpenVPN Server and Client](Installation.MD) ![](https://img.shields.io/badge/VPN-OpenVPN-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 - [Set Global Statis IP 👻](#set-global-statis-ip-)
 - [Automate Script 👻](#automate-script-)
+- [CLI 👻](#cli-openvpn-)
 
 #### ABOUT 👻
   
@@ -30,7 +31,7 @@ This All Aboud OpenVPN Server and Client
         
         sacli start
     
-  - Automate
+  - alternative
   
         Directory sacli in: /usr/local/openvpn_as/scripts
 
@@ -57,26 +58,86 @@ This All Aboud OpenVPN Server and Client
   - for Create User 
     - CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC, VPN GATEWAY, HOW MUCH GATEWAY
 
-          bash ./c_uspw.sh YES username password YES YES 172.16.1.5 YES 2
+          bash ./c_uspw.sh YES achmad password YES YES 172.16.1.5 YES 2
           
     - CREATE, USERNAME, PASSWORD, AUTO LOGIN, STATIC IP, IP ADDRESS STATIC
 
-          bash ./c_uspw.sh YES username password YES YES 172.16.1.5 NO 0
+          bash ./c_uspw.sh YES achmad password YES YES 172.16.1.5 NO 0
           
 
     - CREATE, USERNAME, PASSWORD, AUTO LOGIN
 
-          bash ./c_uspw.sh YES username password YES NO 0.0.0.0 NO 0
+          bash ./c_uspw.sh YES achmad password YES NO 0.0.0.0 NO 0
 
 
     - CREATE, USERNAME, PASSWORD
 
-          bash ./c_uspw.sh YES username password NO NO 0.0.0.0 NO 0
+          bash ./c_uspw.sh YES achmad password NO NO 0.0.0.0 NO 0
 
   - for Delete User 
     - DELETE, USERNAME
 
-          bash ./c_uspw.sh NO username 
+          bash ./c_uspw.sh NO achmad 
 
         
+#### CLI OPENVPN 👻
 
+- Command Line:
+  - List User
+  
+        sacli UserPropGet 
+        
+  - Add User
+  
+        sacli --user <USER_NAME> --key "type" --value "user_connect" UserPropPut
+        Ex:
+        sacli --user  achmad --key "type" --value "user_connect" UserPropPut
+
+  - Add Password User
+  
+        sacli --user <USER_NAME> --new_pass <PASSWORD> SetLocalPassword
+        Ex:
+        sacli --user achmad --new_pass "password" SetLocalPassword
+        
+  - Check Allow Auto-login User
+  
+        sacli --user <USER_OR_GROUP> --key "prop_autologin" --value "true" UserPropPut
+        Ex:
+        sacli --user achmad --key "prop_autologin" --value "true" UserPropPut
+                
+  - Assign Static IP Address spesific user profile
+  
+        sacli --user <USER_NAME> --key "conn_ip" --value <IP_ADDRESS> UserPropPut
+        Ex:
+        sacli --user achmad --key "conn_ip" --value "172.16.1.205" UserPropPut
+
+  - Access Control user profile
+  
+        access_to.N: N = 0-9
+        access_to.0
+        access_to.1
+        access_to.2
+        etc
+        
+        sacli --user <USER_NAME> --key "access_to.N" --value "+NAT:0.0.0.0/1" UserPropPut
+        Ex:
+        sacli --user achmad --key "access_to.0" --value "+NAT:10.10.0.0/1" UserPropPut
+        
+  - VPN Gateway user profile
+  
+        c2s_route.N: N = 0-9
+        c2s_route.0
+        c2s_route.1
+        c2s_route.2
+        etc
+        
+        sacli --user <USER_NAME> --key "c2s_route.N" --value "<subnet>" UserPropPut
+        Ex:
+        sacli --user achmad --key "c2s_route.0" --value "192.168.0.0/24" UserPropPut
+                
+  - Delete User
+  
+        sacli --user <USER_NAME> UserPropDelAll
+        Ex:
+        sacli --user achmad UserPropDelAll
+        
