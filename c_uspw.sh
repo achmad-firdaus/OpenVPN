@@ -13,7 +13,7 @@ then
   username=$2
   password=$3
   stat_statik=$4
-  stat_statik_subnets=$5
+  stat_statik_IP=$5
 
   # Add User:
   sacli --user $username --key "type" --value "user_connect" UserPropPut
@@ -27,7 +27,7 @@ then
   if [ $stat_statik == $YES ]
   then
     echo "Use Statik IP";
-    sacli --user testing --key "conn_ip" --value "$stat_statik_subnets" UserPropPut
+    sacli --user $username --key "conn_ip" --value "$stat_statik_IP" UserPropPut
   else
     echo "Use Dynamic IP";
   fi
@@ -36,4 +36,5 @@ else
   echo "Use Dynamic IP";
 fi
 
+sacli start
 
