@@ -63,7 +63,9 @@ then
             do
                 len=$(($len+1))
                 # echo $len;
-                echo "sacli --user $username --key "c2s_route.$c" --value $valsub$c UserPropPut";
+                echo -n "VPN Gateway with subnet: ";
+                read;
+                echo "sacli --user $username --key "c2s_route.$c" --value ${REPLY} UserPropPut";
                 # echo "Welcome $i times";
             done
     else
