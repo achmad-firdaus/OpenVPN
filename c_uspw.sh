@@ -7,6 +7,7 @@ stat_statik=$3
 
 echo "$username"
 echo "$password"
+echo "$stat_statik"
 
 if [ "$stat_statik" -eq "YES" ]
 #if [$stat_statik=='YES']
