@@ -3,7 +3,7 @@
 
 YES='YES'
 
-create=$i
+create=$1
 
 if [ $create == $YES ]
 then
