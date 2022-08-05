@@ -6,8 +6,8 @@ This All Aboud OpenVPN Server and Client
 - [Installation OpenVPN Server and Client](Installation.md) ![](https://img.shields.io/badge/VPN-OpenVPN-informational?style=flat&logo=<LOGO_NAME>&logoColor=white&color=2bbc8a)
 - [Set Global Statis IP 👻](#set-global-statis-ip-)
 - [Config Manual UI Web 👻](ConfigUIWeb.md)
-- [Config Automate Script 👻](#automate-script-)
-- [CLI 👻](#cli-openvpn-)
+- [Run Automate Script 👻](#automate-script-)
+- [CLI OpenVPN👻](#cli-openvpn-)
 
 #### ABOUT 👻
   
